@@ -36,7 +36,13 @@ const updateTodos = async (req, res) => {
 	try {
 		const updateTodos = await TodoUser.findOneAndUpdate(
 			{ _id: id },
-			{ $set: { title: req.body.title, name: req.body.title } },
+			{
+				$set: {
+					title: req.body.title,
+					name: req.body.name,
+					note: req.body.name,
+				},
+			},
 			{ new: true }
 		);
 		res.status(200).json(updateTodos);
@@ -62,4 +68,16 @@ const deleteTodo = async (req, res) => {
 	}
 };
 
-export { createTodo, getTodos, updateTodos, deleteTodo };
+const getSingleTodo = async (req, res) => {
+	const { id } = req.params;
+	try {
+		const getTodo = await TodoUser.findById({ _id: id });
+		res.status(200).json(getTodo);
+	} catch (error) {
+		res
+			.status(500)
+			.json({ message: "error on controller", error: error.message });
+	}
+};
+
+export { createTodo, getTodos, updateTodos, deleteTodo, getSingleTodo };

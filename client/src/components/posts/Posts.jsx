@@ -5,7 +5,7 @@ import todoImage from "../../images/pexels-breakingpic-3299.jpg";
 import moment from "moment";
 import { Link, useNavigate } from "react-router-dom";
 
-const Post = () => {
+const Posts = () => {
 	const [posts, setPosts] = useState([]);
 	const navigate = useNavigate();
 
@@ -40,7 +40,9 @@ const Post = () => {
 						<p>Note: {post.note}</p>
 						<span>{moment().format("MMM Do YY", post.start_date)}</span>
 						<div className='postButtonContainer'>
-							<button className='btnUpdate'>Update</button>
+							<Link className='btnUpdate' to={`/update/${post._id}`}>
+								Update
+							</Link>
 							<button
 								className='btnDelete'
 								onClick={() => deletePost(post._id)}
@@ -55,4 +57,4 @@ const Post = () => {
 	);
 };
 
-export default Post;
+export default Posts;

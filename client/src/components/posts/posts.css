@@ -21,7 +21,8 @@
 	display: flex;
 	justify-content: space-between;
 }
-.postButtonContainer button {
+.postButtonContainer button,
+.postButtonContainer a {
 	padding: 10px;
 	border: none;
 	color: white;
@@ -29,6 +30,7 @@
 	width: 100%;
 	margin: 10px 10px;
 	font-size: 20px;
+	text-align: center;
 }
 .postButtonContainer .btnUpdate {
 	background-color: #4285f4;
