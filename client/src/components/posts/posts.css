@@ -1,0 +1,38 @@
+.postsContainer {
+	padding: 15px;
+}
+
+.sectionCenter {
+	margin: 10px 0px;
+}
+.postsContainer header {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.todoBtn {
+	padding: 10px;
+	color: white;
+	font-size: 18px;
+	background-color: #4285f4;
+	border-radius: 5px;
+}
+.postButtonContainer {
+	display: flex;
+	justify-content: space-between;
+}
+.postButtonContainer button {
+	padding: 10px;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	width: 100%;
+	margin: 10px 10px;
+	font-size: 20px;
+}
+.postButtonContainer .btnUpdate {
+	background-color: #4285f4;
+}
+.postButtonContainer .btnDelete {
+	background-color: #db4437;
+}

@@ -1,0 +1,38 @@
+.createPostContainer {
+	padding: 10px;
+}
+.createPostContainer form {
+	line-height: 1.5rem;
+}
+.createPostContainer form label {
+	margin: 10px 0px;
+	display: block;
+	font-weight: bold;
+	font-size: 20px;
+}
+.createPostContainer form input {
+	display: block;
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 5px;
+	width: 100%;
+	margin: 15px 0px;
+	border: 1px solid #ccc;
+}
+.createPostContainer form button {
+	padding: 10px;
+	color: white;
+	margin: 10px 0px;
+	background-color: #4285f4;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+}
+.createPostContainer form textarea {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+	border: 1px solid #ccc;
+	height: 200px;
+}
