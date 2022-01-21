@@ -24,15 +24,12 @@ const Update = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let { data } = await axios.patch(
-			`http://localhost:8200/api/v1/todo/${id}`,
-			{
-				name: input.name,
-				title: input.title,
-				start_date: input.start_date,
-				note: input.note,
-			}
-		);
+		await axios.patch(`http://localhost:8200/api/v1/todo/${id}`, {
+			name: input.name,
+			title: input.title,
+			start_date: input.start_date,
+			note: input.note,
+		});
 		navigate("/");
 	};
 

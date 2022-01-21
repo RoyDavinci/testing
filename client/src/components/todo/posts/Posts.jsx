@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./posts.css";
 import axios from "axios";
-import todoImage from "../../images/pexels-breakingpic-3299.jpg";
+import todoImage from "../../../images/pexels-breakingpic-3299.jpg";
 import moment from "moment";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -18,9 +18,7 @@ const Posts = () => {
 	}, []);
 
 	const deletePost = async (id) => {
-		let { data } = await axios.delete(
-			`http://localhost:8200/api/v1/todo/${id}`
-		);
+		await axios.delete(`http://localhost:8200/api/v1/todo/${id}`);
 		navigate("/");
 	};
 
